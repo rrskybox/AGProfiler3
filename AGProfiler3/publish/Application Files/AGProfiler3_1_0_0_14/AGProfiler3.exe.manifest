@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="AGProfiler3.exe" version="1.0.0.14" publicKeyToken="b2bba44b80340075" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="AGProfiler3.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="AGProfiler3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="AGProfiler3.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AGProfiler3.exe" size="331688">
+      <assemblyIdentity name="AGProfiler3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>GK5Ns3s36sl7AxZV1FcZ1H1yXxGehIrVqLxbj0U9ueQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="AGProfiler3.exe.config" size="186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>h0UeIdteCM29dGVw07LmHp593fPbh0IN11GyN3f2uRA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="AGProfiler3.ico" size="196670">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+U1uGaOT9it/pv27ToUaoiy8r+1U43g5TUPm1JFPxis=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 8.1, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=SKYBOX2\Rick" issuerKeyHash="c30aff6b4ef5801296b3bbb1ca34eca6e8d3dc6c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>aSjdNC9O1gHN3bkgjFAcX6n44n4WhfMdejNRtNG53ig=</DigestValue></Reference></SignedInfo><SignatureValue>TNQs3r9H+mUqkcYE4qUmT5FBsTPcrHgoHjZtG5B4mDVOmcsxtjmlNUk5XCsbp5AJWMPcRkiWzrvpMqB6g5GxwMg07mPVx8lzd9FLncwrKUSERvKjvtYge4CZlQ8DVIKyWIOGvkdaxJ2iS7kqImYFUPT31DNYYw7/6OaoPU1lXyQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tQmwOtksysILZHRPZAYaNCQntWXmgEhtRJ6XyRor/bc3jRNsXcE/klcyxRm9GasYEoIBusvRfvFXNY6ZPcnaRMyX/yykPCM1uNKA/1+NNfoV1XgRuetdcpftU2ljOXy9r8wpw7KgLAtVPtrUs3tOyBNkC0oKPZuUFchFDWWzVI0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="28deb9d1b451337a1df385167ee2f8a95f1c508c20b9ddcd01d64e2f34dd2869" Description="" Url=""><as:assemblyIdentity name="AGProfiler3.exe" version="1.0.0.14" publicKeyToken="b2bba44b80340075" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SKYBOX2\Rick</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3ddsp0JZ9NhD5HkzrPWsGsoKaUjFOtKuip+6UH0qzRw=</DigestValue></Reference></SignedInfo><SignatureValue>h5P17CyuDBc+HriluECUiWrKYq3yC9PIFBmXVKJxS3gvOq+cvZ592hvltoiBrlY8wRZ1X48HcRtX2p1bJPybqPnqEq7oqxQE/dPREFl3N6vNvvhgvxZQnzdJyHQNl2bD7NE4taMQ5DhNcVZbKx8gcJeockHVgGFKgemBxvlgjGc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tQmwOtksysILZHRPZAYaNCQntWXmgEhtRJ6XyRor/bc3jRNsXcE/klcyxRm9GasYEoIBusvRfvFXNY6ZPcnaRMyX/yykPCM1uNKA/1+NNfoV1XgRuetdcpftU2ljOXy9r8wpw7KgLAtVPtrUs3tOyBNkC0oKPZuUFchFDWWzVI0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQRsIpy5s4gaNJz1hwXF/rPTANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAUwBLAFkAQgBPAFgAMgBcAFIAaQBjAGswHhcNMTYwMzE1MTkxMDA0WhcNMTcwMzE2MDExMDA0WjAjMSEwHwYDVQQDHhgAUwBLAFkAQgBPAFgAMgBcAFIAaQBjAGswgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALUJsDrZLMrCC2R0T2QGGjQkJ7Vl5oBIbUSel8kaK/23N40TbF3BP5JXMsUZvRmrGBKCAbrL0X7xVzWOmT3J2kTMl/8spDwjNbjSgP9fjTX6FdV4EbnrXXKX7VNpYzl8va/MKcOyoCwLVT7a1LN7TsgTZAtKCj2blBXIRQ1ls1SNAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAYM8tvMfDlOBR5sm8DpomhvG3E6eBL1Okm2yjlQZVVpnnefyTIXrO2hb8kvCfSsFc8yBsJjOhaNsDSj14gJZjvKBEfi1IIitoZX592ASu2yeuFDYJNR5vbiJp/BLAP9yYY0Z7H64KXIWyTwuUJ1Z+0gSdgZcrEPGqaj2yWrO4kEY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
