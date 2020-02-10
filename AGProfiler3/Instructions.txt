@@ -1,0 +1,37 @@
+﻿Overview: This application exercises TSX autoguiding through a range of exposures, aggressiveness, minimum and maximum 
+move settings.  Initially the user sets a starting group of settings for autoguiding.  Once started ("Train"), the program samples
+X and Y tracking errors.  After each sampling period, the mean result is saved and a parameter is adjusted up then down by one
+"click" then resampled.  After every setting has been sampled in this way, the best of the three positions for each parameter is
+uploaded to the autoguider, and the sampling algorithm repeated.  
+
+Results are graphed for each setting as the tests take place.  Each graph is colored red as that specific setting is being tested.
+A status line on the bottom indicates the parameters and results of the most recently completed test.  Information as to the
+value of the maximum ADU for the selected target and current best overall settings are displayed to the left of the graphs.  The
+autoguider may or may not be set to these current best set depending upon the outcome of the each individual sampling.
+
+Over a number of sampling loops, the setting group will evolve towards the values that produce the minimum tracking errors.
+Not all combinations may be exercised, but not all combinations work well anyway.  If there is a sweet spot, then this profiler
+should find it.  The profiler can continue to run during an imaging session and help adapt to changing seeing conditions.  
+However, if exposure training is selected,  then the program must abort autoguiding momentarily to change he exposure setting.
+Other settings are changed on the fly.
+
+"Hunt": After configuring the settings, "Train" starts the above adjust and sample process.  "Train" will start autoguiding, if it
+is not underway, but the user must have previously picked the guide star with either "Find Star" or using TSX's functions.
+
+"Find Star": This version has added guide star selection.  The algorithm uses TSX light source inventorying to avoid hot pixels,
+saturated stars, near-border stars and multiple stars in the subframe.  
+
+"Get TSX Settings" and "Send TSX Settings": This version has added the ability to download and upload settings to TSX.
+
+"Reset":  The sampling database can be cleared and sampling restarted without closing the application.
+
+Requirements:  Auto Guide Profile is a Windows Forms executable, written in Visual Basic.  TSX Camera Add  On option
+is required.  The application runs as a uncertified, standalone application under Windows 7, 8 and 10.  
+
+Installation:  Download the AGProfiler2_Exe.zip and open. Run the "Setup" application.  Upon completion,
+an application icon will have been added to the start menu under the category "TeleTools" with the name
+"Auto Guide Profiler 2".  This application can be pinned to the Start if desired.
+
+Support:  This application was written for the public domain and as such is unsupported. The developer wishes you his best and
+hopes everything works out, but recommends learning Visual Basic (it's really not hard and the tools are free from Microsoft)
+if you find a problem or want to add features.  The source is supplied as a Visual Studio project.
