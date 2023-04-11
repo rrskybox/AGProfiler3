@@ -36,7 +36,7 @@
         'Get maximum pixels ADU
         'Calculate correct exposure to get target max pixels
 
-        Dim tag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tag = CreateObject("TheSky64.ccdsoftCamera")
         tag.Autoguider = 1
         tag.Subframe = True
 
@@ -49,7 +49,7 @@
 
     '*** SingleImage takes one autoguider image with whatever settings are already set
     Public Shared Sub AGSingleImage(exposure As Double, delay As Double)
-        Dim tag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tag = CreateObject("TheSky64.ccdsoftCamera")
         tag.Autoguider = 1
         tag.Abort()
         'Wait a couple of seconds for it to clear
@@ -73,7 +73,7 @@
 
     Public Shared Sub ManageFindStar()
         Dim mtstat
-        Dim tsx_mt = CreateObject("TheSkyX.sky6RASCOMtele")
+        Dim tsx_mt = CreateObject("TheSky64.sky6RASCOMtele")
         Try
             mtstat = tsx_mt.Connect()
         Catch ex As Exception
@@ -115,8 +115,8 @@
         '
         '
         TTUtility.LogIt("Autoguider: Picking guide star")
-        Dim tsx_img = CreateObject("TheSkyX.ccdsoftImage")
-        Dim tsx_agr = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_img = CreateObject("TheSky64.ccdsoftImage")
+        Dim tsx_agr = CreateObject("TheSky64.ccdsoftCamera")
         tsx_agr.Autoguider = 1
 
         'take image
@@ -328,9 +328,9 @@
     End Function
 
     Private Shared Function IsOnEdge(Xpos As Integer, Ypos As Integer, Xsize As Integer, Ysize As Integer, border As Integer) As Boolean
-        If (Xpos - border > 0) And _
-            (Xpos + border < Xsize) And _
-            (Ypos - border > 0) And _
+        If (Xpos - border > 0) And
+            (Xpos + border < Xsize) And
+            (Ypos - border > 0) And
             (Ypos + border) < Ysize Then
             Return False
         Else
@@ -340,7 +340,7 @@
 
     Private Shared Function IsNeighbor(Xpos1 As Integer, Ypos1 As Integer, Xpos2 As Integer, Ypos2 As Integer, subsize As Integer) As Boolean
         Dim limit As Integer = subsize / 2
-        If (Math.Abs(Xpos1 - Xpos2) >= limit) Or _
+        If (Math.Abs(Xpos1 - Xpos2) >= limit) Or
             (Math.Abs(Ypos1 - Ypos2) >= limit) Then
             Return False
         Else
@@ -354,7 +354,7 @@
         Dim endtime As DateTime
         Dim duration As TimeSpan
 
-        Dim tag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tag = CreateObject("TheSky64.ccdsoftCamera")
         tag.Autoguider = 1
         tag.Abort()
         'wait two seconds for the abort to clear
@@ -371,15 +371,15 @@
         tag.Asynchronous = iasave
         tag = Nothing
         Return (duration.TotalSeconds)
-  
+
     End Function
 
     Public Shared Sub StartAG(exposure As Double)
         'Starts autoguiding if autoguiding isn't currently underway.  Exposure in milliseconds.
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.AutoGuider = 1
         tsx_ag.Asynchronous = True
-        If tsx_ag.State <> TheSkyXLib.ccdsoftCameraState.cdStateAutoGuide Then
+        If tsx_ag.State <> TheSky64Lib.ccdsoftCameraState.cdStateAutoGuide Then
             tsx_ag.AutoguiderExposureTime = exposure
             tsx_ag.Autoguide()
             'Wait 3 exposure+delays for the autoguider to get up and going
@@ -396,10 +396,10 @@
         'Checks to see if Autoguide is running, if not sleep for a second and check again
         'If the abortflag gets set than return false
         'Otherwise return true
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.AutoGuider = 1
 
-        Do While tsx_ag.State <> TheSkyXLib.ccdsoftCameraState.cdStateAutoGuide
+        Do While tsx_ag.State <> TheSky64Lib.ccdsoftCameraState.cdStateAutoGuide
             If Not AGAdaptiveTestForm.agprofileabort Then
                 Application.DoEvents()
                 TTUtility.LogIt("Waiting for autoguiding to be turned on.")

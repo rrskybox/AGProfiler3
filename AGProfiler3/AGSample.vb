@@ -16,7 +16,7 @@
         Dim sampleexposure As Double = AGAdaptiveTestForm.ExposureSet.Value
 
         Dim sampleRMS As Double = 0
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
 
         'Wait for the autoguider isto be running, if not

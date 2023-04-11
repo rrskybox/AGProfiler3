@@ -7,7 +7,7 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\AGProfiler3_1_1_0_23\AGProfiler3.exe.manifest" size="5855">
+    <dependentAssembly dependencyType="install" codebase="Application Files\AGProfiler3_1_1_0_22\AGProfiler3.exe.manifest" size="5855">
       <assemblyIdentity name="AGProfiler3.exe" version="1.1.0.22" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>

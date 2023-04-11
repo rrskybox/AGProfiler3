@@ -110,7 +110,7 @@ Public Class AGAdaptiveTestForm
         '   The assumption is that if there is no backlash then the vectors should be equal and opposite.
         '   Otherwise the difference is the backlash in pixels per second
         '
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
 
         Dim caltimeX = tsx_ag.SavedCalibrationTimeX / 100
@@ -148,9 +148,9 @@ Public Class AGAdaptiveTestForm
 
         tsx_ag = Nothing
 
-        Return ("Calculated Backlash = " + TTutility.DoubleClip(dXbacklash, 2) + " (sec) in X and " + TTutility.DoubleClip(dYbacklash, 2) + " (sec) in Y" + vbCrLf +
-                "Current Backlash Compensation is " + TTutility.DoubleClip(currentXcompensation / 1000, 2) + " (sec) in X and " +
-                TTutility.DoubleClip(currentYcompensation / 1000, 2) + " (sec) in Y")
+        Return ("Calculated Backlash = " + TTUtility.DoubleClip(dXbacklash, 2) + " (sec) in X and " + TTUtility.DoubleClip(dYbacklash, 2) + " (sec) in Y" + vbCrLf +
+                "Current Backlash Compensation is " + TTUtility.DoubleClip(currentXcompensation / 1000, 2) + " (sec) in X and " +
+                TTUtility.DoubleClip(currentYcompensation / 1000, 2) + " (sec) in Y")
 
     End Function
 
@@ -296,7 +296,7 @@ Public Class AGAdaptiveTestForm
         'Connect telescope if not already connected. 
         TTUtility.LogIt("Connecting telescope")
         Dim mtstat
-        Dim tsx_mt = CreateObject("TheSkyX.sky6RASCOMtele")
+        Dim tsx_mt = CreateObject("TheSky64.sky6RASCOMtele")
         Try
             mtstat = tsx_mt.Connect()
         Catch ex As Exception

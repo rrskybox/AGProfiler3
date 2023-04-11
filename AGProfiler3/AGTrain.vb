@@ -236,7 +236,7 @@
 
     Private Sub StopAG()
         'Abort autoguiding
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.AutoGuider = 1
         tsx_ag.Asynchronous = False
         tsx_ag.Abort()
@@ -279,7 +279,7 @@
     Public Sub UploadSettings()
         'Set autoguider aggressiveness settings on the fly
 
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.AutoGuider = 1
         tsx_ag.Asynchronous = False
 
@@ -299,7 +299,7 @@
 
     Public Sub DownloadSettings()
         'Download autoguider settings from TSX
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
         tsx_ag.Asynchronous = False
 

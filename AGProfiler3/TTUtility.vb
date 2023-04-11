@@ -33,17 +33,17 @@ Public Class TTUtility
         '   Camera Image Reduction
         '   Camera Filter
 
-        Dim tsx_oi = CreateObject("TheSkyX.Sky6ObjectInformation")
-        tsx_oi.Property(theskyxLib.Sk6ObjectInformationProperty.sk6ObjInfoProp_NAME1)
+        Dim tsx_oi = CreateObject("TheSky64.Sky6ObjectInformation")
+        tsx_oi.Property(TheSky64Lib.Sk6ObjectInformationProperty.sk6ObjInfoProp_NAME1)
         Target_Name = tsx_oi.ObjInfoPropOut
 
-        Dim tsx_cc = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_cc = CreateObject("TheSky64.ccdsoftCamera")
         Cam_Delay = tsx_cc.Delay
         Cam_Reduction = tsx_cc.ImageReduction
         Cam_Filter = tsx_cc.FilterIndexZeroBased
         Cam_Exposure = tsx_cc.ExposureTime
 
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
         AG_Delay = tsx_ag.Delay
         AG_Reduction = tsx_ag.ImageReduction
@@ -68,7 +68,7 @@ Public Class TTUtility
         '   Camera Filter
 
         'Open camera object
-        Dim tsx_cc = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_cc = CreateObject("TheSky64.ccdsoftCamera")
 
         'Restore camera settings
         tsx_cc.ImageReduction = Cam_Reduction
@@ -76,7 +76,7 @@ Public Class TTUtility
         tsx_cc.ExposureTime = Cam_Exposure
         tsx_cc.Delay = Cam_Delay
 
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
         tsx_ag.Delay = AG_Delay
         tsx_ag.ImageReduction = AG_Reduction

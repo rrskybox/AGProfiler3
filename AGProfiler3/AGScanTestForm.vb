@@ -75,7 +75,7 @@
         'Note: Current TSX configuration settings are saved, then restored after the run is completed or aborted
         'Run the profile tests
         '
-        Dim tag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tag = CreateObject("TheSky64.ccdsoftCamera")
         tag.Autoguider = 1
 
         samplesize = SetSampleCount.Value
@@ -196,7 +196,7 @@
         Dim trialRMS As Double
         Dim trialcount As Integer
 
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
 
         tsx_ag.Abort()
@@ -376,7 +376,7 @@
         '   Otherwise the difference is the backlash in pixels per second
 
         '
-        Dim tsx_ag = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsx_ag = CreateObject("TheSky64.ccdsoftCamera")
         tsx_ag.Autoguider = 1
 
         Dim caltimeX = tsx_ag.SavedCalibrationTimeX / 100
