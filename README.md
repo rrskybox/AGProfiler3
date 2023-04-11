@@ -67,7 +67,7 @@ Requirements:
 
 Installation:  
 
-Download the AGProfiler3_Exe.zip and open. Run the "Setup" application.  Upon completion, an application icon will have been added to the start menu under "TSXToolKit" with the name "AutoGuide Profiler 3".  This application can be pinned to the Start if desired.
+Open the AGProfiler3/publish folder. Download AGProfiler3_64Buildxx.zip. Extract all files and run setup.exe. This is an unsigned application so manually enable installation, if required. Upon completion, an application icon will have been added to the start menu under "TSXToolKit" with the name "AutoGuide Profiler 3". This application can be pinned to the Start if desired.
 
 Support:  
 
